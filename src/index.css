@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pink-50: #FFF0F5;
+  --color-pink-100: #FADADD;
+  --color-pink-200: #F8E8EE;
+  --color-pink-300: #FFB6C1;
+  --color-pink-400: #FF91A4;
+  --color-pink-500: #FF69B4;
+  --color-pink-600: #E5558A;
+  --color-cream: #FFFAF5;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F0D98C;
+  --font-serif: 'Noto Serif SC', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', 'Noto Serif SC', Georgia, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-cream);
+  color: #4a3040;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pink-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-pink-300);
+  border-radius: 3px;
+}
+
+::selection {
+  background-color: var(--color-pink-300);
+  color: white;
+}
