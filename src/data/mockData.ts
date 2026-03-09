@@ -220,8 +220,7 @@ export const mockChatData: ChatData = {
       context: '希望我们都幸福 (1.10)',
       messages: [
         { sender: 'her', content: '希望我们都有感知幸福的能力！' },
-        { sender: 'me', content: '我觉得我现在就很有感知幸福的能力，因为...' },
-        { sender: 'me', content: '[撤回了一条消息]' },
+        { sender: 'me', content: '我觉得我现在就很有感知幸福的能力，因为我现在就很幸福' },
         { sender: 'her', content: '放过你了' },
       ],
     },
