@@ -85,7 +85,7 @@ function DailyTrend() {
     >
       <GlassCard>
         <h3 className="text-xl font-semibold text-pink-600 mb-2">每日消息量</h3>
-        <p className="text-pink-400/70 text-sm mb-6">从相遇到现在，我们的聊天频率一路上升</p>
+        <p className="text-pink-400/70 text-sm mb-6">聊天频率下降，因为电话、视频、见面越来越多</p>
         <ResponsiveContainer width="100%" height={220}>
           <AreaChart data={dailyCounts}>
             <defs>
@@ -279,7 +279,7 @@ function MessageTypePie() {
   );
 }
 
-export default function ChatVisualization({ onOpenMenu }: { onOpenMenu?: () => void }) {
+export default function ChatVisualization() {
   return (
     <section className="py-16 md:py-32 px-4 md:px-6 relative overflow-hidden bg-gradient-to-b from-cream via-pink-50/30 to-cream">
       {/* Decorative blurs */}
@@ -297,43 +297,6 @@ export default function ChatVisualization({ onOpenMenu }: { onOpenMenu?: () => v
         <MessageTypePie />
       </div>
 
-      {/* Menu entrance */}
-      {onOpenMenu && (
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-50px' }}
-          className="text-center mt-16"
-        >
-          <p className="text-pink-400/70 text-sm mb-4 italic">还有一个小惊喜...</p>
-          <motion.button
-            onClick={onOpenMenu}
-            animate={{
-              scale: [1, 1.15, 1],
-              boxShadow: [
-                '0 4px 20px rgba(255, 105, 180, 0.3)',
-                '0 8px 30px rgba(255, 105, 180, 0.5)',
-                '0 4px 20px rgba(255, 105, 180, 0.3)',
-              ],
-            }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center w-14 h-14 rounded-full cursor-pointer"
-            style={{
-              background: 'linear-gradient(135deg, #FF69B4, #FFB6C1)',
-            }}
-          >
-            <svg width="24" height="22" viewBox="0 0 16 14" fill="none">
-              <path
-                d="M8 14s-5.5-3.5-7-7C-0.5 3.5 1.5 0 4.5 0 6 0 7.5 1 8 2.5 8.5 1 10 0 11.5 0c3 0 5 3.5 3.5 7-1.5 3.5-7 7-7 7z"
-                fill="white"
-              />
-            </svg>
-          </motion.button>
-          <p className="text-pink-300 text-xs mt-3 tracking-wider">点我看看</p>
-        </motion.div>
-      )}
     </section>
   );
 }

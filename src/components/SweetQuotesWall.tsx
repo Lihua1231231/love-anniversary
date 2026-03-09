@@ -57,22 +57,22 @@ export default function SweetQuotesWall() {
                 )}
 
                 {/* Messages */}
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {quote.messages.map((msg, msgIndex) => (
                     <div
                       key={msgIndex}
                       className={`flex ${msg.sender === 'me' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
-                        className={`max-w-[80%] rounded-2xl px-5 py-3 text-sm leading-relaxed ${
+                        className={`max-w-[78%] text-[13px] leading-[1.7] ${
                           msg.sender === 'me'
-                            ? 'bg-gradient-to-r from-pink-400 to-pink-500 text-white rounded-br-sm'
-                            : 'bg-white/80 text-pink-600 rounded-bl-sm'
+                            ? 'bg-gradient-to-br from-pink-400 to-pink-500 text-white rounded-[18px] rounded-br-[4px] px-4 py-2.5'
+                            : 'bg-white text-pink-700 rounded-[18px] rounded-bl-[4px] px-4 py-2.5'
                         }`}
                         style={{
                           boxShadow: msg.sender === 'me'
-                            ? '0 2px 8px rgba(255, 105, 180, 0.3)'
-                            : '0 2px 8px rgba(255, 182, 193, 0.15)',
+                            ? '0 2px 10px rgba(255, 105, 180, 0.25)'
+                            : '0 1px 6px rgba(0, 0, 0, 0.06)',
                         }}
                       >
                         {msg.content}

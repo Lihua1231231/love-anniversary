@@ -9,6 +9,7 @@ import WeeklyHeatmap from './components/WeeklyHeatmap';
 import NicknameWall from './components/NicknameWall';
 import ChatRecords from './components/ChatRecords';
 import SweetQuotesWall from './components/SweetQuotesWall';
+import MenuEntrance from './components/MenuEntrance';
 import EndingSection from './components/EndingSection';
 import MenuPage from './components/MenuPage';
 
@@ -27,13 +28,14 @@ export default function App() {
       <main>
         <HeroSection />
         <TimelineSection />
-        <ChatVisualization onOpenMenu={() => setMenuOpen(true)} />
+        <ChatVisualization />
         <LoveCurve />
         <FunFacts />
         <WeeklyHeatmap />
         <NicknameWall />
         <ChatRecords />
         <SweetQuotesWall />
+        <MenuEntrance onOpen={() => setMenuOpen(true)} />
         <EndingSection />
       </main>
 
