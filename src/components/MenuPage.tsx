@@ -107,7 +107,7 @@ export default function MenuPage({ onBack }: MenuPageProps) {
           </svg>
 
           <h1 className="text-2xl font-semibold text-pink-600 mb-1.5">
-            金涛的私人餐厅
+            骆洛&向金涛的餐厅
           </h1>
           <p className="text-sm text-pink-400/60">
             只为你一人营业

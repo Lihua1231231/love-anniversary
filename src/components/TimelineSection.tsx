@@ -50,7 +50,7 @@ export default function TimelineSection() {
       {/* Timeline */}
       <div className="max-w-2xl mx-auto relative">
         {/* Center line (desktop) / Left line (mobile) */}
-        <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-pink-200 via-pink-300 to-gold md:-translate-x-1/2" />
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-pink-200 via-pink-300 to-gold md:-translate-x-1/2" />
 
         {milestones.map((milestone, index) => {
           const Icon = milestone.icon;
@@ -66,7 +66,7 @@ export default function TimelineSection() {
               className={`relative flex items-center mb-16 md:mb-20 last:mb-0 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}
             >
               {/* Content card */}
-              <div className={`w-full pl-16 md:pl-0 md:w-5/12 ${isLeft ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'}`}>
+              <div className={`w-full pl-14 md:pl-0 md:w-5/12 ${isLeft ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'}`}>
                 <div
                   className="inline-block rounded-2xl p-4 md:p-6 shadow-lg"
                   style={{
@@ -84,12 +84,12 @@ export default function TimelineSection() {
               </div>
 
               {/* Icon - left side on mobile, center on desktop */}
-              <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-10">
+              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 z-10">
                 <motion.div
                   whileInView={{ scale: [0, 1.2, 1] }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"
+                  className="w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg"
                   style={{
                     background: `linear-gradient(135deg, ${milestone.color}, ${milestone.color}88)`,
                     boxShadow: `0 4px 15px ${milestone.color}40`,
