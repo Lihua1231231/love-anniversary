@@ -83,8 +83,6 @@ export default function TimelineSection() {
                 </div>
               </div>
 
-              {/* Small dot on timeline */}
-              <div className="absolute left-2 md:left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-pink-300 z-10" />
 
               {/* Empty space for other side (desktop only) */}
               <div className="hidden md:block w-5/12" />
