@@ -5,7 +5,8 @@ export interface MenuItem {
   image: string;
   fakePrice: number;
   description?: string;
-  locked?: boolean; // 待解锁菜品
+  locked?: boolean;
+  recommended?: boolean;
 }
 
 export const categories = ['全部', '家常炒菜', '蒸菜', '面/粉', '待解锁'];
@@ -22,6 +23,7 @@ export const menuItems: MenuItem[] = [
     image: img('https://images.unsplash.com/photo-1516684669134-de6f7c473a2a'),
     fakePrice: 38,
     description: '湖南人的灵魂菜',
+    recommended: true,
   },
   {
     id: '2',
@@ -30,6 +32,7 @@ export const menuItems: MenuItem[] = [
     image: img('https://images.unsplash.com/photo-1527578054032-8d8f044e013d'),
     fakePrice: 58,
     description: '软烂入味，看家本领',
+    recommended: true,
   },
   {
     id: '3',

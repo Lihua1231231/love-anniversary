@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ChefHat, Sparkles } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { menuItems, categories } from '../data/menuData';
 import type { MenuItem } from '../data/menuData';
 import MenuCard from './MenuCard';
@@ -91,12 +91,36 @@ export default function MenuPage({ onBack }: MenuPageProps) {
           transition={{ delay: 0.2 }}
           className="text-center mb-8"
         >
-          {/* Decorative icons */}
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <Sparkles className="w-4 h-4 text-pink-300" />
-            <ChefHat className="w-6 h-6 text-pink-400" />
-            <Sparkles className="w-4 h-4 text-pink-300" />
-          </div>
+          {/* Cooking scene illustration */}
+          <svg className="mx-auto mb-4" width="200" height="100" viewBox="0 0 200 100" fill="none">
+            {/* Steam lines */}
+            <motion.path d="M70 35 Q72 25 68 15" stroke="#FFB6C1" strokeWidth="1.5" strokeLinecap="round" fill="none"
+              initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: [0, 0.6, 0] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0 }} />
+            <motion.path d="M85 30 Q87 20 83 10" stroke="#FADADD" strokeWidth="1.5" strokeLinecap="round" fill="none"
+              initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: [0, 0.5, 0] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} />
+            <motion.path d="M100 33 Q102 23 98 13" stroke="#FFB6C1" strokeWidth="1.5" strokeLinecap="round" fill="none"
+              initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: [0, 0.6, 0] }}
+              transition={{ duration: 2, repeat: Infinity, delay: 1 }} />
+            {/* Pan */}
+            <ellipse cx="85" cy="55" rx="35" ry="12" fill="#FF91A4" opacity="0.15" />
+            <path d="M50 50 Q55 70 85 70 Q115 70 120 50" stroke="#FF69B4" strokeWidth="2.5" fill="rgba(255,182,193,0.2)" strokeLinecap="round" />
+            <line x1="120" y1="52" x2="155" y2="45" stroke="#FF69B4" strokeWidth="3" strokeLinecap="round" />
+            {/* Heart above pan */}
+            <motion.path d="M85 42 C85 38 80 35 80 39 C80 42 85 46 85 46 C85 46 90 42 90 39 C90 35 85 38 85 42Z"
+              fill="#FF69B4" opacity="0.6"
+              animate={{ y: [0, -3, 0], scale: [1, 1.1, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity }} />
+            {/* Sparkles */}
+            <circle cx="60" cy="38" r="1.5" fill="#D4AF37" opacity="0.5" />
+            <circle cx="110" cy="35" r="1.5" fill="#D4AF37" opacity="0.5" />
+            <circle cx="140" cy="42" r="1" fill="#FFB6C1" opacity="0.4" />
+            {/* Plate left */}
+            <ellipse cx="25" cy="75" rx="18" ry="7" fill="rgba(255,182,193,0.15)" stroke="#FFB6C1" strokeWidth="1" />
+            {/* Plate right */}
+            <ellipse cx="160" cy="78" rx="15" ry="6" fill="rgba(255,182,193,0.15)" stroke="#FFB6C1" strokeWidth="1" />
+          </svg>
 
           <h1 className="text-2xl font-semibold text-pink-600 mb-1">
             金涛的私人餐厅

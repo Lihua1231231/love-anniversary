@@ -76,9 +76,8 @@ export default function OrderModal({ isOpen, items, onClose }: OrderModalProps) 
             transition={{ type: 'spring', damping: 20 }}
             className="relative w-full max-w-sm rounded-3xl p-6 overflow-hidden"
             style={{
-              background: 'rgba(255, 245, 248, 0.98)',
-              boxShadow: '0 20px 60px rgba(255, 105, 180, 0.3)',
-              border: '2px solid rgba(255, 182, 193, 0.3)',
+              background: 'linear-gradient(180deg, rgba(255, 248, 250, 0.99) 0%, rgba(255, 240, 245, 0.99) 100%)',
+              boxShadow: '0 25px 60px rgba(255, 105, 180, 0.25), 0 0 0 1px rgba(255, 182, 193, 0.2)',
             }}
           >
             {/* Confetti animation */}
